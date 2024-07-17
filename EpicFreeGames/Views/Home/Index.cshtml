@@ -1,0 +1,21 @@
+﻿@model HomeViewModel;
+
+<div class="row my-4">
+    @foreach (var freeGame in @Model.FreeGames)
+    {
+        <div class="col-12 col-lg-4 py-2">
+            <a class="text-decoration-none py-2 mb-5 rounded" href="" target="_blank">
+                <div class="mh-60vh h-60vh overflow-hidden">
+                    <img class="w-100 h-100 object-fit-contain" src=@freeGame.ImageUrl alt="@freeGame.Title" />
+                </div>
+                <div class="pt-3">
+                    <h1>@freeGame.Title</h1>
+                </div>
+                <div class="my-4">
+                    免费时间: @freeGame.StartDate.ToOffset(Consts.EasyZone8).ToString("MMMdd号HH:mm") - @freeGame.EndDate.ToOffset(Consts.EasyZone8).ToString("MMMdd号HH:mm")
+                    </div>
+                <p class="mt-2">@freeGame.Description</p>
+            </a>
+        </div>
+    }
+</div>

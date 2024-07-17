@@ -1,0 +1,33 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #121212;
+}
+
+header {
+    background-color: rgb(24, 24, 28);
+}
+
+a {
+    color: white !important;
+}
+
+footer {
+    position: unset !important;
+    background-color: #202020;
+}
+
+.h-60vh {
+    height: 60vh;
+}
+
+.mh-60vh {
+    max-height: 60vh;
+}
+
+.object-fit-contain {
+    object-fit: contain;
+}
