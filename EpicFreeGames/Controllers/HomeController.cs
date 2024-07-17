@@ -66,11 +66,13 @@ namespace EpicFreeGames.Controllers
                 var promotion = game.Promotions.PromotionalOffers[0].PromotionalOffers[0];
                 var startDate = DateTimeOffset.Parse(promotion.StartDate);
                 var endDate = DateTimeOffset.Parse(promotion.EndDate);
+                var pageSlug = game.OfferMappings.Find(v => v.PageType == "productHome")?.PageSlug ?? "";
 
                 return new FreeGame
                 {
                     Title = game.Title,
                     ImageUrl = imageUrl,
+                    PageSlug = pageSlug,
                     Description = game.Description,
                     EndDate = endDate,
                     StartDate = startDate,
@@ -106,11 +108,13 @@ namespace EpicFreeGames.Controllers
                 var promotion = game.Promotions.UpcomingPromotionalOffers[0].PromotionalOffers[0];
                 var startDate = DateTimeOffset.Parse(promotion.StartDate);
                 var endDate = DateTimeOffset.Parse(promotion.EndDate);
+                var pageSlug = game.OfferMappings.Find(v => v.PageType == "productHome")?.PageSlug ?? "";
 
                 return new FreeGame
                 {
                     Title = game.Title,
                     ImageUrl = imageUrl,
+                    PageSlug = pageSlug,
                     Description = game.Description,
                     EndDate = endDate,
                     StartDate = startDate,

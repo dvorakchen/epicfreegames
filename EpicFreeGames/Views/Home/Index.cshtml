@@ -4,7 +4,7 @@
     @foreach (var freeGame in @Model.FreeGames)
     {
         <div class="col-12 col-lg-4 py-2">
-            <a class="text-decoration-none py-2 mb-5 rounded" href="" target="_blank">
+            <a class="text-decoration-none py-2 mb-5 rounded" href="https://store.epicgames.com/en-US/p/@freeGame.PageSlug" target="_blank">
                 <div class="mh-60vh h-60vh overflow-hidden">
                     <img class="w-100 h-100 object-fit-contain" src=@freeGame.ImageUrl alt="@freeGame.Title" />
                 </div>
